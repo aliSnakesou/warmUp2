@@ -64,8 +64,8 @@
     //         filter_list([1,2,'aasf','1','123',123]) == [1,2,123]
 function filter_list(array){
     var result=[];
-    for(var i =0; i < array.length; i){
-        if(typeof(array[i])!=="string"){
+    for(var i =0; i < array.length; i++){
+        if(typeof(array[i])==="number"){
             result.push(array[i]);
         }
     }
