@@ -19,5 +19,27 @@ Explanation: In this case, no transaction is done, i.e. max profit = 0.
 */
 
 var maxProfit = function(prices) {
-  // YOUR CODE HERE
+  var min=prices[0]
+  for(var i =0; i < prices.length; i++){
+    if(min>prices[i]){
+      min=prices[i];
+    }
+    
+  }
+// return min
+if(prices.indexOf(min)+1==(prices.length)){
+  return "no transaction";
+}
+else{
+  var n=prices.indexOf(min);
+  var array=prices.slice(n);
+  var max=array[0];
+  for(var i =0; i<array.length; i++){
+    if(max<array[i]){
+      max=array[i]
+    }
+  }
+  return max-min;
+}
 };
+
